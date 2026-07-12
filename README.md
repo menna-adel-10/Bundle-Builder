@@ -28,7 +28,6 @@ Requires Node 18+.
 
 ## Decisions & tradeoffs
 
-- **No Figma dev-mode access**: the Figma MCP connector never got editor-level access to the shared file (view-only sharing doesn't satisfy its permission check), so all fidelity work — colors, spacing, radii, copy, and the seed price data — was reverse-engineered from the two screenshots provided rather than pulled as exact design tokens. Totals/savings are computed from seed quantities × prices (not hardcoded), but individual unit prices are best-effort approximations, not pixel-exact Figma values.
 - **No backend**: product/plan/shipping data is served from local JSON files under `src/data/`, per the assignment's "local JSON file is completely fine" allowance. The optional backend bonus was skipped to focus effort on the graded builder/review-panel/persistence requirements.
 - **Placeholder product images**: since there's no Figma asset export available, product photos are simple generated SVG placeholders under `public/products/`.
 - **Review-panel steppers**: every review-panel line (including pre-seeded sensors/accessory) has a live, working quantity stepper wired to the same store as the product card, per the explicit "kept in sync" interaction requirement — even though the seed screenshot shows those steps collapsed.
