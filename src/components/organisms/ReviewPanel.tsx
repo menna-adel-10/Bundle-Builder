@@ -49,27 +49,27 @@ export function ReviewPanel() {
         })}
       </div>
 
-      <div className={styles.section}>
-        {selectedPlan ? (
-          <>
-            <h3 className={styles.subheading}>Plan</h3>
-            <div className={styles.row}>
-              <span className={styles.rowLabel}>
-                <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
-                <span className={styles.planTitle}>{selectedPlan.title}</span>
+      {selectedPlan ? (
+        <div className={styles.section}>
+          <h3 className={styles.subheading}>Plan</h3>
+          <div className={styles.row}>
+            <span className={styles.rowLabel}>
+              <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
+              <span className={styles.planTitle}>
+                {selectedPlan.title.split(' ')[0]} <span className={styles.planTitleAccent}>{selectedPlan.title.split(' ').slice(1).join(' ')}</span>
               </span>
-              <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
-            </div>
-          </>
-        ) : null}
-
-        <div className={styles.row}>
-          <span className={styles.rowLabel}>
-            <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
-            <span className={styles.shippingLabel}>{shipping.label}</span>
-          </span>
-          <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
+            </span>
+            <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
+          </div>
         </div>
+      ) : null}
+
+      <div className={`${styles.section} ${styles.row}`}>
+        <span className={styles.rowLabel}>
+          <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
+          <span className={styles.shippingLabel}>{shipping.label}</span>
+        </span>
+        <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
       </div>
 
       <div className={styles.guaranteeSection}>
