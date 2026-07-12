@@ -79,9 +79,26 @@
 }
 
 .rowIcon {
-  width: 20px;
-  height: 20px;
+  width: 29px;
+  height: 29px;
   flex-shrink: 0;
+}
+
+.planTitle {
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.032px;
+}
+
+.shippingLabel {
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  color: var(--color-obsidian);
 }
 
 .guaranteeSection {

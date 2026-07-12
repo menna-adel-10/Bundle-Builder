@@ -56,7 +56,7 @@ export function ReviewPanel() {
             <div className={styles.row}>
               <span className={styles.rowLabel}>
                 <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
-                {selectedPlan.title}
+                <span className={styles.planTitle}>{selectedPlan.title}</span>
               </span>
               <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
             </div>
@@ -66,7 +66,7 @@ export function ReviewPanel() {
         <div className={styles.row}>
           <span className={styles.rowLabel}>
             <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
-            {shipping.label}
+            <span className={styles.shippingLabel}>{shipping.label}</span>
           </span>
           <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
         </div>
