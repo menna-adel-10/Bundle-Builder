@@ -41,6 +41,12 @@
   }
 }
 
+@media (min-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 .planList {
   display: flex;
   flex-direction: column;
