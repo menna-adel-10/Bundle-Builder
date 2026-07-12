@@ -70,8 +70,8 @@
 }
 
 .guaranteeBadge {
-  width: 96px;
-  height: 96px;
+  width: 78px;
+  height: 78px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -89,7 +89,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   padding: 2px var(--space-2);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
 }
 
 .totalRow {
@@ -111,16 +111,21 @@
 }
 
 .savings {
-  color: var(--color-success);
-  font-size: var(--font-size-xs);
+  font-family: 'Gilroy', var(--font-family);
+  color: #0aa288;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.06px;
+  text-align: center;
   margin: var(--space-2) 0 var(--space-4);
 }
 
 .checkoutButton {
   width: 100%;
-  padding: var(--space-3);
+  padding: 13px 16px;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   background: var(--color-accent);
   color: var(--color-accent-contrast);
   font-weight: var(--font-weight-bold);

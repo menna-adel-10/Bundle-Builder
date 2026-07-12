@@ -48,13 +48,15 @@
 }
 
 .nextButton {
-  margin-top: var(--space-4);
-  width: 100%;
-  padding: var(--space-3);
-  border: none;
-  border-radius: var(--radius-md);
-  background: var(--color-accent);
-  color: var(--color-accent-contrast);
+  margin: var(--space-4) auto 0;
+  display: block;
+  width: fit-content;
+  height: 39px;
+  padding: 5px 24px;
+  border: 1px solid var(--color-accent);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--color-accent);
   font-weight: var(--font-weight-bold);
   cursor: pointer;
 }
