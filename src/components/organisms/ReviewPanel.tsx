@@ -49,25 +49,27 @@ export function ReviewPanel() {
         })}
       </div>
 
-      {selectedPlan ? (
-        <div className={styles.section}>
-          <h3 className={styles.subheading}>Plan</h3>
-          <div className={styles.row}>
-            <span className={styles.rowLabel}>
-              <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
-              {selectedPlan.title}
-            </span>
-            <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
-          </div>
-        </div>
-      ) : null}
+      <div className={styles.section}>
+        {selectedPlan ? (
+          <>
+            <h3 className={styles.subheading}>Plan</h3>
+            <div className={styles.row}>
+              <span className={styles.rowLabel}>
+                <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
+                {selectedPlan.title}
+              </span>
+              <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
+            </div>
+          </>
+        ) : null}
 
-      <div className={`${styles.section} ${styles.row}`}>
-        <span className={styles.rowLabel}>
-          <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
-          {shipping.label}
-        </span>
-        <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
+        <div className={styles.row}>
+          <span className={styles.rowLabel}>
+            <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
+            {shipping.label}
+          </span>
+          <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
+        </div>
       </div>
 
       <div className={styles.guaranteeSection}>
