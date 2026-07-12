@@ -1,0 +1,12 @@
+.badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  z-index: 1;
+}

@@ -1,0 +1,46 @@
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  cursor: pointer;
+  background: var(--color-surface);
+}
+
+.optionSelected {
+  border-color: var(--color-border-selected);
+  border-width: 2px;
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--space-3);
+}
+
+.radioSelected {
+  border-color: var(--color-accent);
+}
+
+.radioDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: var(--font-weight-medium);
+}
