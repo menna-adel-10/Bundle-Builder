@@ -34,56 +34,75 @@ export function ReviewPanel() {
         Review your personalized protection system designed to keep what matters most safe.
       </p>
 
-      {Object.values(TProductCategory).map((category) => {
-        const items = lineItems.filter((item) => item.product.category === category);
-        if (items.length === 0) return null;
-        return (
-          <div key={category}>
-            <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
-            {items.map((item) => (
-              <ReviewLineItem key={item.key} item={item} />
-            ))}
+      <div className={styles.panelBody}>
+        <div className={styles.leftColumn}>
+          <div className={styles.lineItemsScroll}>
+            {Object.values(TProductCategory).map((category) => {
+              const items = lineItems.filter((item) => item.product.category === category);
+              if (items.length === 0) return null;
+              return (
+                <div key={category}>
+                  <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
+                  {items.map((item) => (
+                    <ReviewLineItem key={item.key} item={item} />
+                  ))}
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
 
-      {selectedPlan ? (
-        <div>
-          <h3 className={styles.subheading}>Plan</h3>
+          {selectedPlan ? (
+            <div>
+              <h3 className={styles.subheading}>Plan</h3>
+              <div className={styles.row}>
+                <span className={styles.rowLabel}>
+                  <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
+                  {selectedPlan.title}
+                </span>
+                <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
+              </div>
+            </div>
+          ) : null}
+
           <div className={styles.row}>
-            <span>{selectedPlan.title}</span>
-            <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
+            <span className={styles.rowLabel}>
+              <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
+              {shipping.label}
+            </span>
+            <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
           </div>
         </div>
-      ) : null}
 
-      <div className={styles.row}>
-        <span>{shipping.label}</span>
-        <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
+        <div className={styles.rightColumn}>
+          <div className={styles.guaranteeSection}>
+            <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
+            <div className={styles.guaranteeText}>
+              <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
+              <p className={styles.guaranteeHeading}>30-day hassle-free returns</p>
+              <p className={styles.guaranteeDescription}>
+                If you're not totally in love with the product, we will refund you 100%.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.totalRow}>
+            <span>
+              {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
+              <span className={styles.totalActive}>{formatPrice(total)}</span>
+            </span>
+          </div>
+          {savings > 0 ? (
+            <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security system bundle.</p>
+          ) : null}
+
+          <button type="button" className={styles.checkoutButton} onClick={handleCheckout}>
+            Checkout
+          </button>
+          <button type="button" className={styles.saveLink} onClick={save}>
+            {justSaved ? <span className={styles.savedConfirmation}>Saved!</span> : 'Save my system for later'}
+          </button>
+        </div>
       </div>
-
-      <p className={styles.badgeRow}>
-        <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
-        100% Wyze Guarantee — 30-day hassle-free returns
-      </p>
-      <p className={styles.financingLine}>As low as {formatPrice(financingPerMonth)}/mo with financing</p>
-
-      <div className={styles.totalRow}>
-        <span>
-          {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
-          <span className={styles.totalActive}>{formatPrice(total)}</span>
-        </span>
-      </div>
-      {savings > 0 ? (
-        <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security system bundle.</p>
-      ) : null}
-
-      <button type="button" className={styles.checkoutButton} onClick={handleCheckout}>
-        Checkout
-      </button>
-      <button type="button" className={styles.saveLink} onClick={save}>
-        {justSaved ? <span className={styles.savedConfirmation}>Saved!</span> : 'Save my system for later'}
-      </button>
     </aside>
   );
 }

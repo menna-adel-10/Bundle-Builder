@@ -38,28 +38,30 @@ export function BuilderAccordion() {
               selectedCount={selectedCount}
               onToggle={() => setExpandedStep(step.id)}
             />
-            {isExpanded ? (
-              <div className={styles.content}>
-                {isPlanStep ? (
-                  <div className={styles.planList}>
-                    {PLANS.map((plan) => (
-                      <PlanOption key={plan.id} plan={plan} isSelected={plan.id === planId} onSelect={() => selectPlan(plan.id)} />
-                    ))}
-                  </div>
-                ) : (
-                  <div className={styles.grid}>
-                    {PRODUCTS.filter((product) => product.step === step.id).map((product) => (
-                      <ProductCard key={product.id} product={product} />
-                    ))}
-                  </div>
-                )}
-                {nextStep ? (
-                  <button type="button" className={styles.nextButton} onClick={() => setExpandedStep(nextStep.id)}>
-                    Next: {nextStep.title}
-                  </button>
-                ) : null}
+            <div className={`${styles.contentWrapper} ${isExpanded ? styles.contentWrapperOpen : ''}`}>
+              <div className={styles.contentInner}>
+                <div className={styles.content}>
+                  {isPlanStep ? (
+                    <div className={styles.planList}>
+                      {PLANS.map((plan) => (
+                        <PlanOption key={plan.id} plan={plan} isSelected={plan.id === planId} onSelect={() => selectPlan(plan.id)} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className={styles.grid}>
+                      {PRODUCTS.filter((product) => product.step === step.id).map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  )}
+                  {nextStep ? (
+                    <button type="button" className={styles.nextButton} onClick={() => setExpandedStep(nextStep.id)}>
+                      Next: {nextStep.title}
+                    </button>
+                  ) : null}
+                </div>
               </div>
-            ) : null}
+            </div>
           </section>
         );
       })}

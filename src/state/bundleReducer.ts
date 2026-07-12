@@ -4,7 +4,7 @@ import { SEED_EXPANDED_STEP, SEED_PLAN_ID, SEED_QUANTITIES, SEED_SELECTED_VARIAN
 export type TBundleState = {
   quantities: Record<string, number>;
   selectedVariant: Record<string, string>;
-  expandedStep: TStepId;
+  expandedStep: TStepId | null;
   planId: string;
 };
 
@@ -37,7 +37,7 @@ export function bundleReducer(state: TBundleState, action: TBundleAction): TBund
         selectedVariant: { ...state.selectedVariant, [action.productId]: action.variantId },
       };
     case 'SET_EXPANDED_STEP':
-      return { ...state, expandedStep: state.expandedStep === action.step ? state.expandedStep : action.step };
+      return { ...state, expandedStep: state.expandedStep === action.step ? null : action.step };
     case 'SET_PLAN':
       return { ...state, planId: action.planId };
     case 'HYDRATE':

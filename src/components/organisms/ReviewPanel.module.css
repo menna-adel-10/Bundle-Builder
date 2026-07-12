@@ -1,23 +1,71 @@
 .panel {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-panel);
-  padding: var(--space-6);
+  background: #edf4ff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15px var(--space-6) var(--space-6);
   position: sticky;
   top: var(--space-6);
   z-index: var(--z-sticky-panel);
 }
 
+.panelBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.lineItemsScroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lineItemsScroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .panel {
+    width: 100%;
+    height: 855px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .lineItemsScroll {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+  }
+}
+
 .heading {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.6px;
+  color: #1f1f1f;
   margin: 0 0 var(--space-2);
 }
 
 .description {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.6px;
+  color: rgba(31, 31, 31, 0.75);
   margin: 0 0 var(--space-5);
 }
 
@@ -38,26 +86,59 @@
   font-size: var(--font-size-sm);
 }
 
-.badgeRow {
+.rowLabel {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+}
+
+.rowIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.guaranteeSection {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
   padding: var(--space-4) 0;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-xs);
 }
 
 .guaranteeBadge {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
-.financingLine {
-  color: var(--color-text-secondary);
+.guaranteeText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.financingPill {
+  align-self: flex-start;
+  background: var(--color-text-primary);
+  color: var(--color-surface);
   font-size: var(--font-size-xs);
-  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-medium);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-1);
+}
+
+.guaranteeHeading {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.guaranteeDescription {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
 }
 
 .totalRow {

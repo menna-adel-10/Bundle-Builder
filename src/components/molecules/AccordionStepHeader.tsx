@@ -13,7 +13,7 @@ type TAccordionStepHeaderProps = {
 export function AccordionStepHeader({ step, isExpanded, selectedCount, onToggle }: TAccordionStepHeaderProps) {
   return (
     <button type="button" className={styles.header} onClick={onToggle} aria-expanded={isExpanded}>
-      <StepIcon name={step.icon} />
+      <StepIcon src={step.icon} />
       <span className={styles.titleGroup}>
         <span className={styles.eyebrow}>Step {step.id} of 4</span>
         <span className={styles.title}>{step.title}</span>
