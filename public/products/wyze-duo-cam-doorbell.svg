@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#2E3440"/>
+  <circle cx="100" cy="82" r="34" fill="#ffffff" fill-opacity="0.85"/>
+  <circle cx="100" cy="82" r="16" fill="#2E3440"/>
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">Duo Doorbell</text>
+</svg>
