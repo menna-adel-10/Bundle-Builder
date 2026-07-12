@@ -62,7 +62,10 @@ export function ReviewPanel() {
         <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
       </div>
 
-      <p className={styles.badgeRow}>100% Wyze Guarantee — 30-day hassle-free returns</p>
+      <p className={styles.badgeRow}>
+        <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
+        100% Wyze Guarantee — 30-day hassle-free returns
+      </p>
       <p className={styles.financingLine}>As low as {formatPrice(financingPerMonth)}/mo with financing</p>
 
       <div className={styles.totalRow}>
