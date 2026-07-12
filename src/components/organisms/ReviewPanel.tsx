@@ -38,7 +38,7 @@ export function ReviewPanel() {
         const items = lineItems.filter((item) => item.product.category === category);
         if (items.length === 0) return null;
         return (
-          <div key={category}>
+          <div key={category} className={styles.section}>
             <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
             {items.map((item) => (
               <ReviewLineItem key={item.key} item={item} />
@@ -48,7 +48,7 @@ export function ReviewPanel() {
       })}
 
       {selectedPlan ? (
-        <div>
+        <div className={styles.section}>
           <h3 className={styles.subheading}>Plan</h3>
           <div className={styles.row}>
             <span className={styles.rowLabel}>
@@ -60,7 +60,7 @@ export function ReviewPanel() {
         </div>
       ) : null}
 
-      <div className={styles.row}>
+      <div className={`${styles.section} ${styles.row}`}>
         <span className={styles.rowLabel}>
           <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
           {shipping.label}
