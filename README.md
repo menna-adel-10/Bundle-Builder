@@ -29,7 +29,7 @@ Requires Node 18+.
 ## Decisions & tradeoffs
 
 - **No backend**: product/plan/shipping data is served from local JSON files under `src/data/`, per the assignment's "local JSON file is completely fine" allowance. The optional backend bonus was skipped to focus effort on the graded builder/review-panel/persistence requirements.
-- **Placeholder product images**: since there's no Figma asset export available, product photos are simple generated SVG placeholders under `public/products/`.
+- **Product images**: real product photos are used for Cam v4, Cam Pan v3, Floodlight v2, Duo Cam Doorbell, and Battery Cam Pro, plus the real "100% Wyze Guarantee" badge in the review panel. The 3 products without provided photos (Motion Sensor, Sense Hub, MicroSD Card) still use simple generated SVG placeholders under `public/products/`.
 - **Review-panel steppers**: every review-panel line (including pre-seeded sensors/accessory) has a live, working quantity stepper wired to the same store as the product card, per the explicit "kept in sync" interaction requirement — even though the seed screenshot shows those steps collapsed.
 - **Checkout**: a placeholder `alert()` confirmation, as explicitly allowed by the brief.
 - **Variant chip active styling**: intentionally left unstyled/minimal per the spec's note not to worry about chip highlighting — the selection-and-quantity behavior is fully wired, just not visually indicated on the chip itself.
