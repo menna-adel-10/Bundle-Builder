@@ -17,7 +17,16 @@ export function ProductCard({ product }: { product: TProduct }) {
       <img className={styles.image} src={product.image} alt={product.title} />
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.description}>
-        {product.description} <a className={styles.learnMore} href={product.learnMoreUrl}>Learn More</a>
+        {product.description}{' '}
+        <a
+          className={styles.learnMore}
+          href={product.learnMoreUrl}
+          onClick={(event) => {
+            if (product.learnMoreUrl === '#') event.preventDefault();
+          }}
+        >
+          Learn More
+        </a>
       </p>
       {product.variants ? (
         <VariantChips variants={product.variants} activeVariantId={activeVariantId} onSelect={selectVariant} />
