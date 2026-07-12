@@ -70,21 +70,15 @@ export function ReviewPanel() {
 
       <div className={styles.guaranteeSection}>
         <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
-        <div className={styles.guaranteeText}>
+        <div className={styles.priceBlock}>
           <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
-          <p className={styles.guaranteeHeading}>30-day hassle-free returns</p>
-          <p className={styles.guaranteeDescription}>
-            If you're not totally in love with the product, we will refund you 100%.
-          </p>
+          <div className={styles.totalRow}>
+            {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
+            <span className={styles.totalActive}>{formatPrice(total)}</span>
+          </div>
         </div>
       </div>
 
-      <div className={styles.totalRow}>
-        <span>
-          {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
-          <span className={styles.totalActive}>{formatPrice(total)}</span>
-        </span>
-      </div>
       {savings > 0 ? (
         <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security system bundle.</p>
       ) : null}

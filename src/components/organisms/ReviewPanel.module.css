@@ -31,11 +31,13 @@
 }
 
 .subheading {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-text-muted);
+  letter-spacing: 0.36px;
+  color: #a8b2bd;
   margin: var(--space-4) 0 var(--space-1);
 }
 
@@ -61,53 +63,39 @@
 
 .guaranteeSection {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: var(--space-3);
   padding: var(--space-4) 0;
 }
 
 .guaranteeBadge {
-  width: 56px;
-  height: 56px;
+  width: 96px;
+  height: 96px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
-.guaranteeText {
+.priceBlock {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  align-items: flex-end;
+  gap: var(--space-2);
 }
 
 .financingPill {
-  align-self: flex-start;
-  background: var(--color-text-primary);
+  background: var(--color-accent);
   color: var(--color-surface);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   padding: 2px var(--space-2);
   border-radius: var(--radius-sm);
-  margin-bottom: var(--space-1);
-}
-
-.guaranteeHeading {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin: 0;
-}
-
-.guaranteeDescription {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
-  margin: 0;
 }
 
 .totalRow {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--color-border);
+  gap: var(--space-2);
 }
 
 .totalCompareAt {
