@@ -51,22 +51,33 @@ export function ReviewPanel() {
         <div>
           <h3 className={styles.subheading}>Plan</h3>
           <div className={styles.row}>
-            <span>{selectedPlan.title}</span>
+            <span className={styles.rowLabel}>
+              <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
+              {selectedPlan.title}
+            </span>
             <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
           </div>
         </div>
       ) : null}
 
       <div className={styles.row}>
-        <span>{shipping.label}</span>
+        <span className={styles.rowLabel}>
+          <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
+          {shipping.label}
+        </span>
         <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
       </div>
 
-      <p className={styles.badgeRow}>
+      <div className={styles.guaranteeSection}>
         <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
-        100% Wyze Guarantee — 30-day hassle-free returns
-      </p>
-      <p className={styles.financingLine}>As low as {formatPrice(financingPerMonth)}/mo with financing</p>
+        <div className={styles.guaranteeText}>
+          <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
+          <p className={styles.guaranteeHeading}>30-day hassle-free returns</p>
+          <p className={styles.guaranteeDescription}>
+            If you're not totally in love with the product, we will refund you 100%.
+          </p>
+        </div>
+      </div>
 
       <div className={styles.totalRow}>
         <span>

@@ -85,7 +85,7 @@
     "title": "Wyze Sense Motion Sensor",
     "description": "Detects movement so you're the first to know when something's up.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-sense-motion-sensor.svg",
+    "image": "/products/wyze-sense-motion-sensor.png",
     "compareAtPrice": 29.99,
     "price": 29.99
   },
@@ -107,7 +107,7 @@
     "title": "Wyze MicroSD Card (256GB)",
     "description": "Local storage for your camera footage, no subscription required.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-microsd-card.svg",
+    "image": "/products/wyze-microsd-card.png",
     "compareAtPrice": 20.98,
     "price": 20.98
   }
