@@ -14,8 +14,10 @@ export function PriceTag({ compareAtPrice, price, suffix }: TPriceTagProps) {
   return (
     <span className={styles.priceTag}>
       {hasDiscount ? <span className={styles.compareAt}>{formatPrice(compareAtPrice)}</span> : null}
-      <span className={isFree ? styles.free : styles.active}>{isFree ? 'FREE' : formatPrice(price)}</span>
-      {suffix ? <span className={styles.suffix}>{suffix}</span> : null}
+      <span className={styles.activeRow}>
+        <span className={isFree ? styles.free : styles.active}>{isFree ? 'FREE' : formatPrice(price)}</span>
+        {suffix ? <span className={styles.suffix}>{suffix}</span> : null}
+      </span>
     </span>
   );
 }

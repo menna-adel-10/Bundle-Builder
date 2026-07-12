@@ -9,7 +9,9 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-surface);
+  padding: 4px;
   flex-shrink: 0;
 }
 
