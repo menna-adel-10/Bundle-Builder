@@ -15,6 +15,12 @@
   --color-price-active: #1a1d23;
   --color-success: #1f9d55;
   --color-free: #1f9d55;
+  --color-savings: #0aa288;
+  --color-panel-bg: #edf4ff;
+  --color-heading: #1f1f1f;
+  --color-label-muted: #a8b2bd;
+  --color-divider: #ced6de;
+  --color-text-tertiary: #6f7882;
 
   /* Spacing */
   --space-1: 4px;

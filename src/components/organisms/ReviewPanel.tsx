@@ -34,18 +34,20 @@ export function ReviewPanel() {
         Review your personalized protection system designed to keep what matters most safe.
       </p>
 
-      {Object.values(TProductCategory).map((category) => {
-        const items = lineItems.filter((item) => item.product.category === category);
-        if (items.length === 0) return null;
-        return (
-          <div key={category} className={styles.section}>
-            <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
-            {items.map((item) => (
-              <ReviewLineItem key={item.key} item={item} />
-            ))}
-          </div>
-        );
-      })}
+      <div className={styles.lineItemsScroll}>
+        {Object.values(TProductCategory).map((category) => {
+          const items = lineItems.filter((item) => item.product.category === category);
+          if (items.length === 0) return null;
+          return (
+            <div key={category} className={styles.section}>
+              <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
+              {items.map((item) => (
+                <ReviewLineItem key={item.key} item={item} />
+              ))}
+            </div>
+          );
+        })}
+      </div>
 
       {selectedPlan ? (
         <div className={styles.section}>
