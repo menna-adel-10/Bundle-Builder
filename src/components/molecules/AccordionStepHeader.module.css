@@ -8,6 +8,15 @@
   border: none;
   width: 100%;
   text-align: left;
+  transition: background-color 0.15s ease;
+}
+
+.header:hover {
+  background: var(--color-stepper-bg);
+}
+
+.header:active {
+  background: var(--color-border);
 }
 
 .eyebrow {

@@ -59,5 +59,15 @@
   color: var(--color-accent);
   font-weight: var(--font-weight-bold);
   cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.nextButton:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.nextButton:active {
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  transform: scale(0.97);
 }
 

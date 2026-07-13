@@ -185,6 +185,16 @@
   color: var(--color-accent-contrast);
   font-weight: var(--font-weight-bold);
   cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.checkoutButton:hover {
+  background: color-mix(in srgb, var(--color-accent) 88%, black);
+}
+
+.checkoutButton:active {
+  background: color-mix(in srgb, var(--color-accent) 76%, black);
+  transform: scale(0.98);
 }
 
 .saveLink {
@@ -196,6 +206,15 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  transition: color 0.15s ease;
+}
+
+.saveLink:hover {
+  color: var(--color-accent);
+}
+
+.saveLink:active {
+  opacity: 0.7;
 }
 
 .savedConfirmation {
