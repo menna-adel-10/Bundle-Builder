@@ -7,7 +7,7 @@ import styles from './ReviewLineItem.module.css';
 export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
   const { product, variant } = item;
   const { quantity, setQuantity } = useProductQuantity(product, variant?.id);
-  const title = variant ? `${product.title} (${variant.label})` : product.title;
+  const title = product.title;
 
   return (
     <div className={styles.row}>
