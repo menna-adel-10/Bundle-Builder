@@ -21,10 +21,17 @@
 
 .eyebrow {
   display: block;
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 10px;
+  font-weight: var(--font-weight-regular);
+  line-height: 100%;
+  letter-spacing: 1.6px;
+  color: var(--color-eyebrow);
   text-transform: uppercase;
+}
+
+.eyebrowOpen {
+  font-size: 12px;
 }
 
 .title {
