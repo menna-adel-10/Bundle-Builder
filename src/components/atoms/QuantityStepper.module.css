@@ -7,13 +7,14 @@
 .button {
   width: 20px;
   height: 20px;
+  padding: 0;
   border: none;
   border-radius: var(--radius-xs);
   background: var(--color-surface);
   color: var(--color-icon-muted);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  line-height: 1;
+  line-height: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
