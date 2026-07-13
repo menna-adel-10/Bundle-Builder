@@ -31,7 +31,7 @@ export function BuilderAccordion() {
         const nextStep = STEPS.find((candidate) => candidate.id === step.id + 1);
 
         return (
-          <section key={step.id} className={styles.step}>
+          <section key={step.id} className={`${styles.step} ${isExpanded ? styles.stepOpen : ''}`}>
             <AccordionStepHeader
               step={step}
               isExpanded={isExpanded}

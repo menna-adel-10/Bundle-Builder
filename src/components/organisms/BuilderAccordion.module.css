@@ -1,14 +1,27 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
 }
 
 .step {
   background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.step:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.stepOpen {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  margin: var(--space-4) 0;
+}
+
+.stepOpen:first-child {
+  border-top: 1px solid var(--color-border);
+  margin-top: 0;
 }
 
 .contentWrapper {
