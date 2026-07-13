@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: TProduct }) {
         <VariantChips variants={product.variants} activeVariantId={activeVariantId} onSelect={selectVariant} />
       ) : null}
       <div className={styles.footer}>
-        <QuantityStepper quantity={quantity} onChange={setQuantity} />
+        <QuantityStepper quantity={quantity} onChange={setQuantity} isFree={product.price === 0} />
         <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
       </div>
     </div>

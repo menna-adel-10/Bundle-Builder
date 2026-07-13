@@ -13,7 +13,7 @@ export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
     <div className={styles.row}>
       <img className={styles.thumbnail} src={product.image} alt={title} />
       <span className={styles.title}>{title}</span>
-      <QuantityStepper quantity={quantity} onChange={setQuantity} />
+      <QuantityStepper quantity={quantity} onChange={setQuantity} isFree={product.price === 0} />
       <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
     </div>
   );
