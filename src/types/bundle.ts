@@ -30,6 +30,7 @@ export type TProduct = {
   price: number;
   variants?: TVariant[];
   defaultVariantId?: string;
+  required?: boolean;
 };
 
 export type TPlan = {

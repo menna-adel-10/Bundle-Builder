@@ -98,7 +98,8 @@
     "learnMoreUrl": "#",
     "image": "/products/wyze-sense-hub.png",
     "compareAtPrice": 29.92,
-    "price": 0
+    "price": 0,
+    "required": true
   },
   {
     "id": "wyze-microsd-card-256gb",
