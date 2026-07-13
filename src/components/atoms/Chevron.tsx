@@ -11,7 +11,7 @@ export function Chevron({ direction }: TChevronProps) {
       fill="none"
       style={{ transform: direction === 'up' ? 'rotate(180deg)' : undefined }}
     >
-      <path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M2 4L7 10L12 4H2Z" fill="currentColor" />
     </svg>
   );
 }
