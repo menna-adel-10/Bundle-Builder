@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  flex-direction: column;
+  gap: 3px;
   padding: 20px 15px;
   cursor: pointer;
   background: none;
@@ -9,6 +9,11 @@
   width: 100%;
   text-align: left;
   transition: background-color 0.15s ease;
+}
+
+.headerOpen {
+  gap: 8px;
+  padding-top: 15px;
 }
 
 .header:hover {
@@ -32,17 +37,21 @@
 
 .eyebrowOpen {
   font-size: 12px;
+  padding-bottom: 8px;
+  border-bottom: 0.5px solid var(--color-row-divider);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .title {
   display: block;
-  margin-top: 3px;
+  flex: 1;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-}
-
-.titleGroup {
-  flex: 1;
 }
 
 .state {
