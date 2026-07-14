@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  align-items: center;
+  gap: var(--space-3);
   padding: 20px 15px;
   cursor: pointer;
   background: none;
@@ -11,9 +11,20 @@
   transition: background-color 0.15s ease;
 }
 
+.textStack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3px;
+  min-width: 0;
+}
+
 .headerOpen {
-  gap: 8px;
   padding-top: 15px;
+}
+
+.textStackOpen {
+  gap: 8px;
 }
 
 .header:hover {
@@ -21,7 +32,7 @@
 }
 
 .header:active {
-  background: color-mix(in srgb, var(--color-panel-bg) 98%, black);
+  background: color-mix(in srgb, var(--color-panel-bg) 95%, black);
 }
 
 .eyebrow {

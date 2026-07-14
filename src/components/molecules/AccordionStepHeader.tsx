@@ -18,13 +18,15 @@ export function AccordionStepHeader({ step, isExpanded, selectedCount, onToggle 
       onClick={onToggle}
       aria-expanded={isExpanded}
     >
-      <span className={`${styles.eyebrow} ${isExpanded ? styles.eyebrowOpen : ''}`}>Step {step.id} of 4</span>
-      <span className={styles.titleRow}>
-        <StepIcon src={step.icon} />
-        <span className={styles.title}>{step.title}</span>
-        <span className={styles.state}>
-          {isExpanded ? <span>{selectedCount} selected</span> : null}
-          <Chevron direction={isExpanded ? 'up' : 'down'} />
+      <span className={`${styles.textStack} ${isExpanded ? styles.textStackOpen : ''}`}>
+        <span className={`${styles.eyebrow} ${isExpanded ? styles.eyebrowOpen : ''}`}>Step {step.id} of 4</span>
+        <span className={styles.titleRow}>
+          <StepIcon src={step.icon} />
+          <span className={styles.title}>{step.title}</span>
+          <span className={styles.state}>
+            {isExpanded ? <span>{selectedCount} selected</span> : null}
+            <Chevron direction={isExpanded ? 'up' : 'down'} />
+          </span>
         </span>
       </span>
     </button>
