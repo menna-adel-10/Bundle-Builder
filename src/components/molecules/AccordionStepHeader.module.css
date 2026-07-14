@@ -19,11 +19,30 @@
   background: var(--color-border);
 }
 
+.eyebrow {
+  display: block;
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 10px;
+  font-weight: var(--font-weight-regular);
+  line-height: 100%;
+  letter-spacing: 1.6px;
+  color: var(--color-eyebrow);
+  text-transform: uppercase;
+}
+
+.eyebrowOpen {
+  font-size: 12px;
+}
+
 .title {
   display: block;
-  flex: 1;
+  margin-top: 3px;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
+}
+
+.titleGroup {
+  flex: 1;
 }
 
 .state {
