@@ -5,16 +5,23 @@
 
 .step {
   background: var(--color-surface);
-  border-top: 0.5px solid var(--color-row-divider);
   border-bottom: 0.5px solid var(--color-row-divider);
   overflow: hidden;
 }
 
-.stepOpen {
+.step:first-child {
+  border-top: 0.5px solid var(--color-row-divider);
+}
+
+.step.stepOpen {
   background: var(--color-panel-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   margin: var(--space-4) 0;
+}
+
+.stepOpen:first-child {
+  margin-top: 0;
 }
 
 .contentWrapper {
