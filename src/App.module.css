@@ -13,3 +13,27 @@
     grid-template-columns: minmax(0, 1fr) 380px;
   }
 }
+
+.mobileHeading {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .layout {
+    padding: var(--space-4) 0 0;
+    gap: 0;
+  }
+
+  .mobileHeading {
+    display: block;
+    margin: 0 0 var(--space-4);
+    padding: 0 var(--space-4);
+    font-family: 'Gilroy', var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    line-height: 110%;
+    letter-spacing: -0.06px;
+    text-align: center;
+    color: var(--color-heading);
+  }
+}

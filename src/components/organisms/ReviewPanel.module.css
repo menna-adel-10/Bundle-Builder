@@ -1,17 +1,31 @@
 .panel {
   background: var(--color-panel-bg);
   border-radius: 10px;
-  width: 399px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: calc(100vh - var(--space-6) * 2);
+  max-height: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 15px var(--space-6) var(--space-6);
-  position: sticky;
-  top: var(--space-6);
+  position: static;
   z-index: var(--z-sticky-panel);
+}
+
+@media (min-width: 1300px) {
+  .panel {
+    width: 399px;
+    max-height: calc(100vh - var(--space-6) * 2);
+    position: sticky;
+    top: var(--space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .panel {
+    border-radius: 0;
+    padding: 15px var(--space-4) var(--space-4);
+  }
 }
 
 .lineItemsScroll {
