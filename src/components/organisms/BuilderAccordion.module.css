@@ -1,7 +1,13 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 100%;
+}
+
+@media (min-width: 1300px) {
+  .accordion {
+    max-width: 768px;
+  }
 }
 
 .step {
@@ -45,14 +51,20 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
-.grid > :last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: calc(50% - 7.5px);
-  margin: 0 auto;
+@media (min-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 7.5px);
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 560px) {

@@ -57,6 +57,7 @@
   /* Layout */
   --layout-max-width: 1200px;
   --layout-gap: 32px;
+  --breakpoint-desktop: 1300px;
   --breakpoint-tablet: 900px;
   --breakpoint-phone: 560px;
 
