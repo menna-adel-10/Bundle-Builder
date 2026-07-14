@@ -8,10 +8,11 @@ export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
   const { product, variant } = item;
   const { quantity, setQuantity } = useProductQuantity(product, variant?.id);
   const title = product.title;
+  const image = variant?.image ?? product.image;
 
   return (
     <div className={styles.row}>
-      <img className={styles.thumbnail} src={product.image} alt={title} />
+      <img className={styles.thumbnail} src={image} alt={title} />
       <span className={styles.title}>{title}</span>
       <QuantityStepper
         quantity={quantity}

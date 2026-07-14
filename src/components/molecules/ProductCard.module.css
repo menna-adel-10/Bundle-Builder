@@ -4,10 +4,9 @@
   flex-direction: column;
   gap: var(--space-3);
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: var(--space-4);
-  box-shadow: var(--shadow-card);
 }
 
 .cardSelected {
@@ -20,6 +19,47 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius-md);
+}
+
+.content {
+  display: contents;
+}
+
+@media (min-width: 560px) {
+  .card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 15px;
+    border-radius: var(--radius-md);
+  }
+
+  .cardSelected {
+    border-color: color-mix(in srgb, var(--color-border-selected) 70%, transparent);
+  }
+
+  .image {
+    width: 101px;
+    height: 137px;
+    flex-shrink: 0;
+    aspect-ratio: auto;
+    border-radius: 5px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card {
+    gap: 19px;
+    padding: 11px;
+  }
 }
 
 .title {

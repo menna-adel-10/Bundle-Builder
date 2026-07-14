@@ -15,6 +15,8 @@ export type TVariant = {
   id: string;
   label: string;
   colorHex: string;
+  image?: string;
+  swatchImage?: string;
 };
 
 export type TProduct = {

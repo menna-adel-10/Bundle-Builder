@@ -13,7 +13,7 @@
     "variants": [
       { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
       { "id": "grey", "label": "Grey", "colorHex": "#8C8C8C" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B" }
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/dfa724c811c98887e295ddf6d1b842bf7f555246.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -29,8 +29,8 @@
     "compareAtPrice": 39.98,
     "price": 34.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "swatchImage": "/products/a0088c61da6ff66f06d71bdbe9496a53344f2c0e.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/9635a12db624c130033a4166489f19d4dd442883.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -46,8 +46,8 @@
     "compareAtPrice": 88.98,
     "price": 69.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/50a6f9b3cf2a431126be6488ddfca6647e979827.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/7d83d6ff32c0ddf80e1096fa37910875072ca87a.png", "swatchImage": "/products/2989bafdebb392f5c271645b0aa3977ff131a2f7.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -74,7 +74,7 @@
     "price": 89.98,
     "variants": [
       { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B" }
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/5a86d03ace4842214c1d63d582b0c618fc4bdedf.png" }
     ],
     "defaultVariantId": "white"
   },
