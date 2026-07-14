@@ -17,11 +17,11 @@
 }
 
 .header:hover {
-  background: var(--color-stepper-bg);
+  background: color-mix(in srgb, var(--color-panel-bg) 98%, black);
 }
 
 .header:active {
-  background: var(--color-border);
+  background: color-mix(in srgb, var(--color-panel-bg) 98%, black);
 }
 
 .eyebrow {
@@ -58,7 +58,8 @@
 .state {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
-  color: var(--color-text-secondary);
+  color: var(--color-accent);
   font-size: var(--font-size-sm);
 }

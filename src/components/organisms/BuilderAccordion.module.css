@@ -1,7 +1,7 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  max-width: 768px;
+  width: 768px;
 }
 
 .step {
