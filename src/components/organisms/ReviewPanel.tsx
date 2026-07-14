@@ -84,7 +84,7 @@ export function ReviewPanel() {
       </div>
 
       {savings > 0 ? (
-        <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security system bundle.</p>
+        <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security bundle!</p>
       ) : null}
 
       <button type="button" className={styles.checkoutButton} onClick={handleCheckout}>
