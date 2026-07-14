@@ -30,6 +30,7 @@
 
 .chipActive {
   border-color: var(--color-savings);
+  background: color-mix(in srgb, var(--color-chip-selected-bg) 4%, var(--color-surface));
   color: var(--color-text-primary);
 }
 

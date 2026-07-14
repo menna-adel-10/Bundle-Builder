@@ -14,7 +14,11 @@ export function ProductCard({ product }: { product: TProduct }) {
   const image = activeVariant?.image ?? product.image;
 
   return (
-    <div className={`${styles.card} ${quantity > 0 ? styles.cardSelected : ''}`}>
+    <div
+      className={`${styles.card} ${quantity > 0 ? styles.cardSelected : ''} ${
+        !product.variants ? styles.noVariants : ''
+      }`}
+    >
       {product.badge ? <Badge label={product.badge} /> : null}
       <img className={styles.image} src={image} alt={product.title} />
       <div className={styles.content}>
