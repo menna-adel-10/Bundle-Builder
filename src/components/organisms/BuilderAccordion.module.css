@@ -1,6 +1,7 @@
 .accordion {
   display: flex;
   flex-direction: column;
+  max-width: 768px;
 }
 
 .step {
@@ -15,7 +16,7 @@
 
 .step.stepOpen {
   background: var(--color-panel-bg);
-  border: 1px solid var(--color-border);
+  border: none;
   border-radius: var(--radius-md);
   margin: var(--space-4) 0;
 }
@@ -45,12 +46,12 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  gap: 15px;
 }
 
 .grid > :last-child:nth-child(odd) {
   grid-column: 1 / -1;
-  max-width: calc(50% - var(--space-4) / 2);
+  max-width: calc(50% - 7.5px);
   margin: 0 auto;
 }
 

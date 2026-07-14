@@ -37,7 +37,8 @@
 
 .eyebrowOpen {
   font-size: 12px;
-  padding-bottom: 8px;
+  margin: 0 -15px;
+  padding: 0 15px 8px;
   border-bottom: 0.5px solid var(--color-row-divider);
 }
 
