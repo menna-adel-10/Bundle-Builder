@@ -11,6 +11,15 @@
   font-size: var(--font-size-xs);
 }
 
+.compareAtMuted {
+  font-family: 'Gilroy', var(--font-family);
+  color: var(--color-price-strike);
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  line-height: 100%;
+  letter-spacing: 0.6px;
+}
+
 .activeRow {
   display: inline-flex;
   align-items: baseline;
@@ -21,6 +30,15 @@
   color: var(--color-accent);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-sm);
+}
+
+.activeMuted {
+  font-family: 'Gilroy', var(--font-family);
+  color: var(--color-icon-muted);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.6px;
 }
 
 .free {

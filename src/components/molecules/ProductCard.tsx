@@ -41,7 +41,7 @@ export function ProductCard({ product }: { product: TProduct }) {
             isFree={product.price === 0}
             min={product.required ? 1 : 0}
           />
-          <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+          <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} tone="muted" />
         </div>
       </div>
     </div>
