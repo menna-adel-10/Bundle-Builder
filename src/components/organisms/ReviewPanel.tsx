@@ -84,13 +84,12 @@ export function ReviewPanel() {
                 If you're not totally in love with the product, we will refund you 100%.
               </p>
             </div>
-          </div>
-
-          <div className={styles.priceRow}>
-            <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
-            <div className={styles.totalRow}>
-              {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
-              <span className={styles.totalActive}>{formatPrice(total)}</span>
+            <div className={styles.priceBlock}>
+              <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
+              <div className={styles.totalRow}>
+                {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
+                <span className={styles.totalActive}>{formatPrice(total)}</span>
+              </div>
             </div>
           </div>
 
