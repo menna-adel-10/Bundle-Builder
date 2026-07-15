@@ -59,10 +59,14 @@
   }
 
   .sideCol {
-    width: 320px;
-    flex-shrink: 0;
+    flex: 0 1 320px;
+    min-width: 230px;
     justify-content: flex-start;
     align-self: stretch;
+  }
+
+  .mainCol {
+    min-width: 230px;
   }
 }
 
@@ -274,7 +278,6 @@
   line-height: 100%;
   letter-spacing: -0.06px;
   text-align: center;
-  white-space: nowrap;
   margin: var(--space-2) 0 var(--space-4);
 }
 

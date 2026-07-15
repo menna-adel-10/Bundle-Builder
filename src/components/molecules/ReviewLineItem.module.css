@@ -1,6 +1,8 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-3);
   padding: var(--space-1) 0;
 }
