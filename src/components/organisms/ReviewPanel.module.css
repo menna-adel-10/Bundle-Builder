@@ -96,7 +96,7 @@
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: #484848;
-  margin: 0 0 var(--space-2);
+  margin: 0 0 var(--space-5);
 }
 
 @container (min-width: 560px) {
@@ -342,11 +342,12 @@
     display: flex;
     order: 2;
     flex-basis: auto;
+    align-items: flex-start;
   }
 
   .guaranteeBadge {
-    width: 160px;
-    height: 160px;
+    width: 131px;
+    height: 131px;
   }
 
   .priceBlock {

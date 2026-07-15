@@ -46,7 +46,7 @@
     "compareAtPrice": 88.98,
     "price": 69.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/50a6f9b3cf2a431126be6488ddfca6647e979827.png" },
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/96d92fa4f08e0bdd9fa6fd7b1e59231ec3d3d38b.png" },
       { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/7d83d6ff32c0ddf80e1096fa37910875072ca87a.png", "swatchImage": "/products/2989bafdebb392f5c271645b0aa3977ff131a2f7.png" }
     ],
     "defaultVariantId": "white"
