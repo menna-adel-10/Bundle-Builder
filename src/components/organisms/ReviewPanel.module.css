@@ -44,6 +44,11 @@
     flex: 1;
   }
 
+  .guaranteeBadge {
+    width: 131px;
+    height: 131px;
+  }
+
   .sideCol {
     width: 320px;
     flex-shrink: 0;
