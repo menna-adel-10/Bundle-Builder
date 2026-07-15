@@ -45,11 +45,6 @@
     flex: 1;
   }
 
-  .guaranteeBadge {
-    width: 131px;
-    height: 131px;
-  }
-
   .sideCol {
     flex: 0 1 320px;
     min-width: 230px;
@@ -330,6 +325,11 @@
     display: flex;
     order: 2;
     flex-basis: auto;
+  }
+
+  .guaranteeBadge {
+    width: 160px;
+    height: 160px;
   }
 
   .priceBlock {
