@@ -59,12 +59,21 @@
   }
 
   .noVariants .layout {
+    display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .noVariants .content {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 240px;
   }
 
   .noVariants .image {
     width: 101px;
     height: 101px;
+    flex-shrink: 0;
   }
 }
 
@@ -79,6 +88,7 @@
 }
 
 @media (max-width: 560px) {
+
   .layout,
   .noVariants .layout {
     flex-direction: column;
@@ -108,7 +118,8 @@
 
 .learnMore {
   font-size: var(--font-size-xs);
-  text-decoration: none;
+  text-decoration: underline;
+  color: var(--color-accent-link);
 }
 
 .footer {
