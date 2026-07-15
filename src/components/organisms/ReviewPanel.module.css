@@ -1,4 +1,5 @@
 .panel {
+  container-type: inline-size;
   background: var(--color-panel-bg);
   border-radius: 10px;
   width: 100%;
@@ -12,9 +13,41 @@
   z-index: var(--z-sticky-panel);
 }
 
-@media (min-width: 1300px) {
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mainCol,
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+@container (min-width: 560px) {
+  .body {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-6);
+  }
+
+  .mainCol {
+    flex: 1;
+  }
+
+  .sideCol {
+    width: 320px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
   .panel {
-    width: 399px;
+    width: 380px;
     max-height: calc(100vh - var(--space-6) * 2);
     position: sticky;
     top: var(--space-6);
@@ -123,8 +156,7 @@
 
 .guaranteeSection {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
   gap: var(--space-3);
   padding: var(--space-4) 0;
 }
@@ -136,11 +168,35 @@
   object-fit: contain;
 }
 
-.priceBlock {
-  display: flex;
+.guaranteeCopy {
+  display: none;
   flex-direction: column;
-  align-items: flex-end;
-  gap: var(--space-2);
+  gap: var(--space-1);
+}
+
+.guaranteeHeading {
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.guaranteeText {
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
 }
 
 .financingPill {
@@ -242,4 +298,10 @@
 
 .savedConfirmation {
   color: var(--color-success);
+}
+
+@container (min-width: 560px) {
+  .guaranteeCopy {
+    display: flex;
+  }
 }

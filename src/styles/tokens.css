@@ -57,9 +57,9 @@
   --font-weight-bold: 700;
 
   /* Layout */
-  --layout-max-width: 1200px;
+  --layout-max-width: 1800px;
   --layout-gap: 32px;
-  --breakpoint-desktop: 1300px;
+  --breakpoint-desktop: 1024px;
   --breakpoint-tablet: 900px;
   --breakpoint-phone: 560px;
 
