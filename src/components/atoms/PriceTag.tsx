@@ -18,6 +18,7 @@ export function PriceTag({ compareAtPrice, price, suffix, tone = 'accent' }: TPr
       {hasDiscount ? (
         <span className={`${styles.compareAt} ${isMuted ? styles.compareAtMuted : ''}`}>
           {formatPrice(compareAtPrice)}
+          {suffix ? suffix : ''}
         </span>
       ) : null}
       <span className={styles.activeRow}>

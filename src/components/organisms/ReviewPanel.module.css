@@ -1,5 +1,6 @@
 .panel {
   container-type: inline-size;
+  container-name: reviewPanel;
   background: var(--color-panel-bg);
   border-radius: 10px;
   width: 100%;
