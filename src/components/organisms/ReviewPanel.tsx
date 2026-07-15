@@ -31,6 +31,7 @@ export function ReviewPanel() {
     <aside className={styles.panel}>
       <div className={styles.body}>
         <div className={styles.mainCol}>
+          <p className={styles.eyebrow}>Review</p>
           <h2 className={styles.heading}>Your security system</h2>
           <p className={styles.description}>
             Review your personalized protection system designed to keep what matters most safe.

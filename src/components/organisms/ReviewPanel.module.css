@@ -88,6 +88,23 @@
   display: none;
 }
 
+.eyebrow {
+  font-family: 'Gilroy', var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #484848;
+  margin: 0 0 var(--space-2);
+}
+
+@container (min-width: 560px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
 .heading {
   font-family: 'Gilroy', var(--font-family);
   font-size: 22px;
