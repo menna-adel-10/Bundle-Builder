@@ -6,14 +6,14 @@
     "title": "Wyze Cam v4",
     "description": "The clearest Wyze Cam ever made.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-cam-v4.png",
+    "image": "/products/wyze-cam-v4-white.png",
     "badge": "Save 22%",
     "compareAtPrice": 35.98,
     "price": 27.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-v4-white.png" },
       { "id": "grey", "label": "Grey", "colorHex": "#8C8C8C" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/dfa724c811c98887e295ddf6d1b842bf7f555246.png" }
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/wyze-cam-v4-black-swatch.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -24,13 +24,13 @@
     "title": "Wyze Cam Pan v3",
     "description": "360° pan and 180° tilt security camera.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-cam-pan-v3.png",
+    "image": "/products/wyze-cam-pan-v3-white.png",
     "badge": "Save 12%",
     "compareAtPrice": 39.98,
     "price": 34.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "swatchImage": "/products/a0088c61da6ff66f06d71bdbe9496a53344f2c0e.png" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/9635a12db624c130033a4166489f19d4dd442883.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-pan-v3-white.png", "swatchImage": "/products/wyze-cam-pan-v3-white-swatch.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/wyze-cam-pan-v3-black-swatch.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -41,13 +41,13 @@
     "title": "Wyze Cam Floodlight v2",
     "description": "2K floodlight camera with a 160° wide-angle view for your garage.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-cam-floodlight-v2.png",
+    "image": "/products/wyze-cam-floodlight-v2-white.png",
     "badge": "Save 22%",
     "compareAtPrice": 88.98,
     "price": 69.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/96d92fa4f08e0bdd9fa6fd7b1e59231ec3d3d38b.png" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/7d83d6ff32c0ddf80e1096fa37910875072ca87a.png", "swatchImage": "/products/2989bafdebb392f5c271645b0aa3977ff131a2f7.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-floodlight-v2-white.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-cam-floodlight-v2-black.png", "swatchImage": "/products/wyze-cam-floodlight-v2-black-swatch.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -58,7 +58,7 @@
     "title": "Wyze Duo Cam Doorbell",
     "description": "Two cameras. Two views. Double the porch protection.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-duo-cam-doorbell.png",
+    "image": "/products/wyze-duo-cam-doorbell-black.png",
     "compareAtPrice": 69.98,
     "price": 69.98
   },
@@ -69,12 +69,12 @@
     "title": "Wyze Battery Cam Pro",
     "description": "Protect anywhere. See everything in 2.5K HDR. No power outlet or electrician needed.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-battery-cam-pro.png",
+    "image": "/products/wyze-battery-cam-pro-white.png",
     "compareAtPrice": 89.98,
     "price": 89.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/5a86d03ace4842214c1d63d582b0c618fc4bdedf.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-battery-cam-pro-white.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-battery-cam-pro-black.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -85,7 +85,7 @@
     "title": "Wyze Sense Motion Sensor",
     "description": "Detects movement so you're the first to know when something's up.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-sense-motion-sensor.png",
+    "image": "/products/wyze-sense-motion-sensor-white.png",
     "compareAtPrice": 29.99,
     "price": 29.99
   },
@@ -96,7 +96,7 @@
     "title": "Wyze Sense Hub (Required)",
     "description": "The brains that connect all your sensors together.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-sense-hub.png",
+    "image": "/products/wyze-sense-hub-white.png",
     "compareAtPrice": 29.92,
     "price": 0,
     "required": true
@@ -108,7 +108,7 @@
     "title": "Wyze MicroSD Card (256GB)",
     "description": "Local storage for your camera footage, no subscription required.",
     "learnMoreUrl": "#",
-    "image": "/products/wyze-microsd-card.png",
+    "image": "/products/wyze-microsd-card-black.png",
     "compareAtPrice": 20.98,
     "price": 20.98
   }
