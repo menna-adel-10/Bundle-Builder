@@ -59,12 +59,18 @@
   }
 
   .noVariants .layout {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .noVariants .image {
     width: 101px;
     height: 101px;
+  }
+
+  .noVariants .footer {
+    justify-content: center;
   }
 }
 
@@ -86,11 +92,20 @@
     gap: var(--space-3);
   }
 
+  .noVariants .layout {
+    align-items: center;
+    text-align: center;
+  }
+
   .image,
   .noVariants .image {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
+  }
+
+  .noVariants .footer {
+    justify-content: center;
   }
 }
 
