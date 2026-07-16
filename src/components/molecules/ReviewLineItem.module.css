@@ -19,6 +19,11 @@
 
 .title {
   flex: 1;
-  font-size: var(--font-size-sm);
   min-width: 0;
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  color: var(--color-obsidian);
 }
