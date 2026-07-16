@@ -33,7 +33,7 @@
 
 .buttonPlain {
   background: var(--color-surface);
-  border: 1px solid var(--color-divider);
+  border: none;
 }
 
 .buttonPlain:hover:not(:disabled) {
