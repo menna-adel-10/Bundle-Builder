@@ -30,7 +30,7 @@
 
 .stepperCol {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -38,5 +38,5 @@
   display: flex;
   justify-content: flex-end;
   flex-shrink: 0;
-  min-width: 70px;
+  min-width: 44px;
 }
