@@ -159,10 +159,24 @@
   gap: var(--space-2);
 }
 
-.rowIcon {
+.planIcon {
+  width: 26px;
+  height: 31px;
+  flex-shrink: 0;
+}
+
+.shippingIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+}
+
+.shippingIcon {
   width: 29px;
   height: 29px;
-  flex-shrink: 0;
 }
 
 .planTitle {

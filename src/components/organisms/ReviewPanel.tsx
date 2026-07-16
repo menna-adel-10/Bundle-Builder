@@ -57,7 +57,7 @@ export function ReviewPanel() {
               <h3 className={styles.subheading}>Plan</h3>
               <div className={styles.row}>
                 <span className={styles.rowLabel}>
-                  <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
+                  <img className={styles.planIcon} src="/icons/wyze-shield.svg" alt="" />
                   <span className={styles.planTitle}>
                     {selectedPlan.title.split(' ')[0]} <span className={styles.planTitleAccent}>{selectedPlan.title.split(' ').slice(1).join(' ')}</span>
                   </span>
@@ -69,7 +69,9 @@ export function ReviewPanel() {
 
           <div className={`${styles.section} ${styles.row}`}>
             <span className={styles.rowLabel}>
-              <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
+              <span className={styles.shippingIconBox}>
+                <img className={styles.shippingIcon} src="/icons/shipping-truck.svg" alt="" />
+              </span>
               <span className={styles.shippingLabel}>{shipping.label}</span>
             </span>
             <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
