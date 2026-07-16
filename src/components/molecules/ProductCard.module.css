@@ -1,12 +1,10 @@
 .card {
-  container-type: inline-size;
   position: relative;
   background: var(--color-surface);
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: 15px 11px;
   display: flex;
-  align-items: center;
 }
 
 .cardSelected {
@@ -17,97 +15,22 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 16px;
+  height: 100%;
 }
 
 .image {
   width: 100%;
-  max-width: 180px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   object-fit: contain;
   border-radius: 5px;
 }
 
 .content {
-  display: contents;
-}
-
-@container (min-width: 260px) {
-  .card {
-    border-radius: var(--radius-md);
-  }
-
-  .cardSelected {
-    border-color: color-mix(in srgb, var(--color-border-selected) 70%, transparent);
-  }
-
-  .layout {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .image {
-    width: 101px;
-    height: 137px;
-    flex-shrink: 0;
-    aspect-ratio: auto;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--space-3);
-    flex: 1;
-    min-width: 0;
-  }
-
-  .noVariants .layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .noVariants .content {
-    flex: 0 1 auto;
-    min-width: 0;
-    width: fit-content;
-  }
-
-  .noVariants .image {
-    width: 101px;
-    height: 101px;
-    flex-shrink: 0;
-  }
-}
-
-@container (min-width: 560px) {
-  .card {
-    padding: 20px 15px;
-  }
-
-  .layout {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 560px) {
-
-  .layout,
-  .noVariants .layout {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-3);
-  }
-
-  .image,
-  .noVariants .image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
 }
 
 .title {
@@ -130,8 +53,48 @@
 
 .footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-top: auto;
   gap: var(--space-2);
+}
+
+/* Desktop only */
+
+@media (min-width: 980px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  .layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image {
+    width: 101px;
+    height: 137px;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .content {
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .noVariants .layout {
+    justify-content: center;
+  }
+
+  .noVariants .content {
+    flex: 0 1 auto;
+    width: fit-content;
+  }
+
+  .noVariants .image {
+    width: 101px;
+    height: 101px;
+  }
 }

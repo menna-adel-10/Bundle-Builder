@@ -10,6 +10,7 @@
   border-bottom: 0.5px solid var(--color-row-divider);
   overflow: hidden;
   padding: 0 var(--space-4);
+
   container-type: inline-size;
 }
 
@@ -43,10 +44,12 @@
 }
 
 .content {
-  padding: 20px 0 15px;
+  padding: 0 0 15px;
 }
 
-@media (max-width: 560px) {
+/* Mobile */
+
+@media (max-width: 559px) {
   .step.stepOpen {
     border-radius: 0;
   }
@@ -56,11 +59,15 @@
   }
 }
 
+/* Grid */
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
 }
+
+/* Desktop */
 
 @container (min-width: 560px) {
   .grid {
@@ -71,6 +78,21 @@
 @container (min-width: 1150px) {
   .grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 560px) and (max-width: 979px) {
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 4px;
+  }
+
+  .grid>* {
+    flex: 0 0 225px;
   }
 }
 
@@ -92,14 +114,20 @@
   color: var(--color-accent);
   font-weight: var(--font-weight-bold);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease;
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease;
 }
 
 .nextButton:hover {
-  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  background: color-mix(in srgb,
+      var(--color-accent) 10%,
+      transparent);
 }
 
 .nextButton:active {
-  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  background: color-mix(in srgb,
+      var(--color-accent) 18%,
+      transparent);
   transform: scale(0.97);
 }
