@@ -1,29 +1,62 @@
 .stepper {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  padding: var(--space-1) var(--space-2);
+  gap: 10px;
 }
 
 .button {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
   border: none;
-  border-radius: var(--radius-pill);
-  background: var(--color-bg);
-  color: var(--color-text-primary);
+  border-radius: var(--radius-xs);
+  background: var(--color-stepper-button-bg);
+  color: var(--color-icon-muted);
   font-size: var(--font-size-md);
-  line-height: 1;
+  font-weight: var(--font-weight-bold);
+  line-height: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-stepper-button-bg) 80%, black);
+}
+
+.button:active:not(:disabled) {
+  background: color-mix(in srgb, var(--color-stepper-button-bg) 68%, black);
+  transform: scale(0.92);
+}
+
+.buttonPlain {
+  background: var(--color-surface);
+  border: none;
+}
+
+.buttonPlain:hover:not(:disabled) {
+  background: var(--color-stepper-bg);
+}
+
+.buttonPlain:active:not(:disabled) {
+  background: var(--color-divider);
+}
+
+.buttonFree {
+  background: var(--color-stepper-bg);
+  border: 1px solid var(--color-divider);
+}
+
+.buttonFree:hover:not(:disabled) {
+  background: var(--color-divider);
 }
 
 .button:disabled {
+  background: var(--color-surface);
   color: var(--color-text-muted);
+  border: 1px solid var(--color-divider);
   cursor: not-allowed;
 }
 

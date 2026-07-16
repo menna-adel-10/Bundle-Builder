@@ -10,21 +10,45 @@ import styles from './ProductCard.module.css';
 export function ProductCard({ product }: { product: TProduct }) {
   const { activeVariantId, selectVariant } = useActiveVariant(product);
   const { quantity, setQuantity } = useProductQuantity(product, activeVariantId);
+  const activeVariant = product.variants?.find((variant) => variant.id === activeVariantId);
+  const image = activeVariant?.image ?? product.image;
 
   return (
-    <div className={`${styles.card} ${quantity > 0 ? styles.cardSelected : ''}`}>
+    <div
+      className={`${styles.card} ${quantity > 0 ? styles.cardSelected : ''} ${
+        !product.variants ? styles.noVariants : ''
+      }`}
+    >
       {product.badge ? <Badge label={product.badge} /> : null}
-      <img className={styles.image} src={product.image} alt={product.title} />
-      <h3 className={styles.title}>{product.title}</h3>
-      <p className={styles.description}>
-        {product.description} <a className={styles.learnMore} href={product.learnMoreUrl}>Learn More</a>
-      </p>
-      {product.variants ? (
-        <VariantChips variants={product.variants} activeVariantId={activeVariantId} onSelect={selectVariant} />
-      ) : null}
-      <div className={styles.footer}>
-        <QuantityStepper quantity={quantity} onChange={setQuantity} />
-        <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+      <div className={styles.layout}>
+        <img className={styles.image} src={image} alt={product.title} />
+        <div className={styles.content}>
+          <h3 className={styles.title}>{product.title}</h3>
+          <p className={styles.description}>
+            {product.description}{' '}
+            <a
+              className={styles.learnMore}
+              href={product.learnMoreUrl}
+              onClick={(event) => {
+                if (product.learnMoreUrl === '#') event.preventDefault();
+              }}
+            >
+              Learn More
+            </a>
+          </p>
+          {product.variants ? (
+            <VariantChips variants={product.variants} activeVariantId={activeVariantId} onSelect={selectVariant} />
+          ) : null}
+          <div className={styles.footer}>
+            <QuantityStepper
+              quantity={quantity}
+              onChange={setQuantity}
+              isFree={product.price === 0}
+              min={product.required ? 1 : 0}
+            />
+            <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} tone="muted" />
+          </div>
+        </div>
       </div>
     </div>
   );

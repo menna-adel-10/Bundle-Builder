@@ -15,6 +15,8 @@ export type TVariant = {
   id: string;
   label: string;
   colorHex: string;
+  image?: string;
+  swatchImage?: string;
 };
 
 export type TProduct = {
@@ -30,6 +32,7 @@ export type TProduct = {
   price: number;
   variants?: TVariant[];
   defaultVariantId?: string;
+  required?: boolean;
 };
 
 export type TPlan = {

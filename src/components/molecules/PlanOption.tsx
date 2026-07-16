@@ -13,6 +13,12 @@ export function PlanOption({ plan, isSelected, onSelect }: TPlanOptionProps) {
     <div
       className={`${styles.option} ${isSelected ? styles.optionSelected : ''}`}
       onClick={onSelect}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onSelect();
+        }
+      }}
       role="radio"
       aria-checked={isSelected}
       tabIndex={0}

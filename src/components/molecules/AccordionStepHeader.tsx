@@ -12,15 +12,24 @@ type TAccordionStepHeaderProps = {
 
 export function AccordionStepHeader({ step, isExpanded, selectedCount, onToggle }: TAccordionStepHeaderProps) {
   return (
-    <button type="button" className={styles.header} onClick={onToggle} aria-expanded={isExpanded}>
-      <StepIcon name={step.icon} />
-      <span className={styles.titleGroup}>
-        <span className={styles.eyebrow}>Step {step.id} of 4</span>
-        <span className={styles.title}>{step.title}</span>
-      </span>
-      <span className={styles.state}>
-        {isExpanded ? <span>{selectedCount} selected</span> : null}
-        <Chevron direction={isExpanded ? 'up' : 'down'} />
+    <button
+      type="button"
+      className={`${styles.header} ${isExpanded ? styles.headerOpen : ''}`}
+      onClick={onToggle}
+      aria-expanded={isExpanded}
+    >
+      <span className={`${styles.textStack} ${isExpanded ? styles.textStackOpen : ''}`}>
+        <span className={`${styles.eyebrow} ${isExpanded ? styles.eyebrowOpen : ''}`}>Step {step.id} of 4</span>
+        <span className={styles.titleRow}>
+          <StepIcon src={step.icon} />
+          <span className={styles.title}>{step.title}</span>
+          <span className={styles.state}>
+            {isExpanded ? <span>{selectedCount} selected</span> : null}
+            <span className={styles.chevronBox}>
+              <Chevron direction={isExpanded ? 'up' : 'down'} />
+            </span>
+          </span>
+        </span>
       </span>
     </button>
   );

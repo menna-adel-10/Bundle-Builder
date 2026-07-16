@@ -1,13 +1,12 @@
 .card {
+  container-type: inline-size;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
   border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  box-shadow: var(--shadow-card);
+  padding: 15px 11px;
+  display: flex;
+  align-items: center;
 }
 
 .cardSelected {
@@ -15,11 +14,98 @@
   border-width: 2px;
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
 .image {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--radius-md);
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.content {
+  display: contents;
+}
+
+@container (min-width: 260px) {
+  .card {
+    border-radius: var(--radius-md);
+  }
+
+  .cardSelected {
+    border-color: color-mix(in srgb, var(--color-border-selected) 70%, transparent);
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image {
+    width: 101px;
+    height: 137px;
+    flex-shrink: 0;
+    aspect-ratio: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-3);
+    flex: 1;
+    min-width: 0;
+  }
+
+  .noVariants .layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .noVariants .content {
+    flex: 0 1 auto;
+    min-width: 0;
+    width: fit-content;
+  }
+
+  .noVariants .image {
+    width: 101px;
+    height: 101px;
+    flex-shrink: 0;
+  }
+}
+
+@container (min-width: 560px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  .layout {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .layout,
+  .noVariants .layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .image,
+  .noVariants .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .title {
@@ -30,18 +116,20 @@
 
 .description {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-tertiary);
   margin: 0;
 }
 
 .learnMore {
   font-size: var(--font-size-xs);
-  text-decoration: none;
+  text-decoration: underline;
+  color: var(--color-accent-link);
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
+  flex-wrap: wrap;
+  gap: var(--space-2);
 }
