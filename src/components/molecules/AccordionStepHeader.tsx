@@ -1,36 +1,41 @@
-import type { TStepConfig } from '../../data/steps';
-import { Chevron } from '../atoms/Chevron';
-import { StepIcon } from '../atoms/StepIcon';
-import styles from './AccordionStepHeader.module.css';
+import type { TStepConfig } from "../../data/steps"
+import { Chevron } from "../atoms/Chevron"
+import { StepIcon } from "../atoms/StepIcon"
+import styles from "./AccordionStepHeader.module.css"
 
 type TAccordionStepHeaderProps = {
-  step: TStepConfig;
-  isExpanded: boolean;
-  selectedCount: number;
-  onToggle: () => void;
-};
+  step: TStepConfig
+  isExpanded: boolean
+  selectedCount: number
+  onToggle: () => void
+}
 
-export function AccordionStepHeader({ step, isExpanded, selectedCount, onToggle }: TAccordionStepHeaderProps) {
+export function AccordionStepHeader({
+  step,
+  isExpanded,
+  selectedCount,
+  onToggle,
+}: TAccordionStepHeaderProps) {
   return (
     <button
       type="button"
-      className={`${styles.header} ${isExpanded ? styles.headerOpen : ''}`}
+      className={`${styles.header} ${isExpanded ? styles.headerOpen : ""}`}
       onClick={onToggle}
       aria-expanded={isExpanded}
     >
-      <span className={`${styles.textStack} ${isExpanded ? styles.textStackOpen : ''}`}>
-        <span className={`${styles.eyebrow} ${isExpanded ? styles.eyebrowOpen : ''}`}>Step {step.id} of 4</span>
+      <span className={styles.textStack}>
+        <span className={styles.eyebrow}>Step {step.id} of 4</span>
         <span className={styles.titleRow}>
           <StepIcon src={step.icon} />
           <span className={styles.title}>{step.title}</span>
           <span className={styles.state}>
             {isExpanded ? <span>{selectedCount} selected</span> : null}
             <span className={styles.chevronBox}>
-              <Chevron direction={isExpanded ? 'up' : 'down'} />
+              <Chevron direction={isExpanded ? "up" : "down"} />
             </span>
           </span>
         </span>
       </span>
     </button>
-  );
+  )
 }
