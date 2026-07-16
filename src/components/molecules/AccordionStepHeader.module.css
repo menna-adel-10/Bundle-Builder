@@ -54,13 +54,13 @@
   letter-spacing: 1.6px;
   color: var(--color-eyebrow);
   text-transform: uppercase;
+  margin: 0 -27px;
+  padding: 0 27px 8px;
+  border-bottom: 0.5px solid var(--color-row-divider);
 }
 
 .eyebrowOpen {
   font-size: 12px;
-  margin: 0 -27px;
-  padding: 0 27px 8px;
-  border-bottom: 0.5px solid var(--color-row-divider);
 }
 
 .titleRow {
