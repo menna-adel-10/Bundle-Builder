@@ -37,10 +37,3 @@
     color: var(--color-heading);
   }
 }
-
-@media (min-width: 1300px) {
-  .layout {
-    grid-template-columns: 1fr 420px;
-    max-width: 1400px;
-  }
-}
