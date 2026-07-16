@@ -95,7 +95,7 @@
   line-height: 100%;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: #484848;
+  color: var(--color-eyebrow);
   margin: 0 0 var(--space-5);
 }
 
@@ -168,10 +168,11 @@
 .shippingIconBox {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 41px;
   height: 41px;
   flex-shrink: 0;
+  margin-left: -6px;
 }
 
 .shippingIcon {
