@@ -5,10 +5,11 @@ type TQuantityStepperProps = {
   onChange: (next: number) => void;
   min?: number;
   isFree?: boolean;
+  tone?: 'gray' | 'plain';
 };
 
-export function QuantityStepper({ quantity, onChange, min = 0, isFree = false }: TQuantityStepperProps) {
-  const buttonClassName = `${styles.button} ${isFree ? styles.buttonFree : ''}`;
+export function QuantityStepper({ quantity, onChange, min = 0, isFree = false, tone = 'gray' }: TQuantityStepperProps) {
+  const buttonClassName = `${styles.button} ${tone === 'plain' ? styles.buttonPlain : ''} ${isFree ? styles.buttonFree : ''}`;
 
   return (
     <div className={styles.stepper}>

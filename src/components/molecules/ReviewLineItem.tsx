@@ -20,6 +20,7 @@ export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
           onChange={setQuantity}
           isFree={product.price === 0}
           min={product.required ? 1 : 0}
+          tone="plain"
         />
       </span>
       <span className={styles.priceCol}>
