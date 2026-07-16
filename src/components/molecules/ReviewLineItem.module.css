@@ -1,20 +1,42 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-3);
-  padding: var(--space-2) 0;
+  padding: var(--space-1) 0;
 }
 
 .thumbnail {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--color-surface);
+  padding: 4px;
   flex-shrink: 0;
 }
 
 .title {
   flex: 1;
-  font-size: var(--font-size-sm);
   min-width: 0;
+  font-family: 'Gilroy', var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  color: var(--color-obsidian);
+}
+
+.stepperCol {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.priceCol {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 44px;
 }

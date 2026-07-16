@@ -31,7 +31,7 @@ export function BuilderAccordion() {
         const nextStep = STEPS.find((candidate) => candidate.id === step.id + 1);
 
         return (
-          <section key={step.id} className={styles.step}>
+          <section key={step.id} className={`${styles.step} ${isExpanded ? styles.stepOpen : ''}`}>
             <AccordionStepHeader
               step={step}
               isExpanded={isExpanded}
@@ -42,7 +42,7 @@ export function BuilderAccordion() {
               <div className={styles.contentInner}>
                 <div className={styles.content}>
                   {isPlanStep ? (
-                    <div className={styles.planList}>
+                    <div className={styles.planList} role="radiogroup" aria-label="Plan">
                       {PLANS.map((plan) => (
                         <PlanOption key={plan.id} plan={plan} isSelected={plan.id === planId} onSelect={() => selectPlan(plan.id)} />
                       ))}

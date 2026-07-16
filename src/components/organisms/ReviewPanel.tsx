@@ -29,19 +29,20 @@ export function ReviewPanel() {
 
   return (
     <aside className={styles.panel}>
-      <h2 className={styles.heading}>Your security system</h2>
-      <p className={styles.description}>
-        Review your personalized protection system designed to keep what matters most safe.
-      </p>
+      <div className={styles.body}>
+        <div className={styles.mainCol}>
+          <p className={styles.eyebrow}>Review</p>
+          <h2 className={styles.heading}>Your security system</h2>
+          <p className={styles.description}>
+            Review your personalized protection system designed to keep what matters most safe.
+          </p>
 
-      <div className={styles.panelBody}>
-        <div className={styles.leftColumn}>
           <div className={styles.lineItemsScroll}>
             {Object.values(TProductCategory).map((category) => {
               const items = lineItems.filter((item) => item.product.category === category);
               if (items.length === 0) return null;
               return (
-                <div key={category}>
+                <div key={category} className={styles.section}>
                   <h3 className={styles.subheading}>{CATEGORY_LABELS[category]}</h3>
                   {items.map((item) => (
                     <ReviewLineItem key={item.key} item={item} />
@@ -52,47 +53,51 @@ export function ReviewPanel() {
           </div>
 
           {selectedPlan ? (
-            <div>
+            <div className={styles.section}>
               <h3 className={styles.subheading}>Plan</h3>
               <div className={styles.row}>
                 <span className={styles.rowLabel}>
-                  <img className={styles.rowIcon} src="/icons/wyze-shield.svg" alt="" />
-                  {selectedPlan.title}
+                  <img className={styles.planIcon} src="/icons/wyze-shield.svg" alt="" />
+                  <span className={styles.planTitle}>
+                    {selectedPlan.title.split(' ')[0]} <span className={styles.planTitleAccent}>{selectedPlan.title.split(' ').slice(1).join(' ')}</span>
+                  </span>
                 </span>
                 <PriceTag compareAtPrice={selectedPlan.compareAtPrice} price={selectedPlan.price} suffix={selectedPlan.billingSuffix} />
               </div>
             </div>
           ) : null}
 
-          <div className={styles.row}>
+          <div className={`${styles.section} ${styles.row}`}>
             <span className={styles.rowLabel}>
-              <img className={styles.rowIcon} src="/icons/shipping-truck.svg" alt="" />
-              {shipping.label}
+              <div className={styles.shippingIconBox}>
+                <img className={styles.shippingIcon} src="/icons/shipping-truck.svg" alt="" />
+              </div>
+              <span className={styles.shippingLabel}>{shipping.label}</span>
             </span>
             <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />
           </div>
         </div>
 
-        <div className={styles.rightColumn}>
+        <div className={styles.sideCol}>
           <div className={styles.guaranteeSection}>
             <img className={styles.guaranteeBadge} src="/guarantee-badge.png" alt="100% Wyze satisfaction guarantee" />
-            <div className={styles.guaranteeText}>
-              <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
-              <p className={styles.guaranteeHeading}>30-day hassle-free returns</p>
-              <p className={styles.guaranteeDescription}>
+            <div className={styles.guaranteeCopy}>
+              <h3 className={styles.guaranteeHeading}>30-day hassle-free returns</h3>
+              <p className={styles.guaranteeText}>
                 If you're not totally in love with the product, we will refund you 100%.
               </p>
             </div>
+            <div className={styles.priceBlock}>
+              <span className={styles.financingPill}>as low as {formatPrice(financingPerMonth)}/mo</span>
+              <div className={styles.totalRow}>
+                {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
+                <span className={styles.totalActive}>{formatPrice(total)}</span>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.totalRow}>
-            <span>
-              {compareAtTotal > total ? <span className={styles.totalCompareAt}>{formatPrice(compareAtTotal)}</span> : null}
-              <span className={styles.totalActive}>{formatPrice(total)}</span>
-            </span>
-          </div>
           {savings > 0 ? (
-            <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security system bundle.</p>
+            <p className={styles.savings}>Congrats! You're saving {formatPrice(savings)} on your security bundle!</p>
           ) : null}
 
           <button type="button" className={styles.checkoutButton} onClick={handleCheckout}>

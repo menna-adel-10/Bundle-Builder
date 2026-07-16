@@ -7,14 +7,25 @@ import styles from './ReviewLineItem.module.css';
 export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
   const { product, variant } = item;
   const { quantity, setQuantity } = useProductQuantity(product, variant?.id);
-  const title = variant ? `${product.title} (${variant.label})` : product.title;
+  const title = product.title;
+  const image = variant?.image ?? product.image;
 
   return (
     <div className={styles.row}>
-      <img className={styles.thumbnail} src={product.image} alt={title} />
+      <img className={styles.thumbnail} src={image} alt={title} />
       <span className={styles.title}>{title}</span>
-      <QuantityStepper quantity={quantity} onChange={setQuantity} />
-      <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+      <span className={styles.stepperCol}>
+        <QuantityStepper
+          quantity={quantity}
+          onChange={setQuantity}
+          isFree={product.price === 0}
+          min={product.required ? 1 : 0}
+          tone="plain"
+        />
+      </span>
+      <span className={styles.priceCol}>
+        <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+      </span>
     </div>
   );
 }

@@ -8,16 +8,35 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  padding: var(--space-1) var(--space-3);
+  min-height: 26px;
+  border: 0.5px solid var(--color-border);
+  border-radius: 2px;
+  padding: 1px 3px;
   background: var(--color-surface);
   font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.chip:hover {
+  border-color: var(--color-savings);
+  background: var(--color-stepper-bg);
+}
+
+.chip:active {
+  transform: scale(0.96);
 }
 
 .chipActive {
-  border-color: var(--color-border-selected);
+  border-color: var(--color-savings);
+  background: color-mix(in srgb, var(--color-chip-selected-bg) 4%, var(--color-surface));
   color: var(--color-text-primary);
+}
+
+.swatchImage {
+  width: 22px;
+  height: 22px;
+  border-radius: 1px;
+  object-fit: contain;
 }

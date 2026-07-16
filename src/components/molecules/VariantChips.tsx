@@ -18,7 +18,11 @@ export function VariantChips({ variants, activeVariantId, onSelect }: TVariantCh
           className={`${styles.chip} ${variant.id === activeVariantId ? styles.chipActive : ''}`}
           onClick={() => onSelect(variant.id)}
         >
-          <ColorSwatch colorHex={variant.colorHex} />
+          {variant.swatchImage ? (
+            <img className={styles.swatchImage} src={variant.swatchImage} alt="" />
+          ) : (
+            <ColorSwatch colorHex={variant.colorHex} />
+          )}
           {variant.label}
         </button>
       ))}
