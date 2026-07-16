@@ -10,7 +10,7 @@
   padding: 0;
   border: none;
   border-radius: var(--radius-xs);
-  background: var(--color-surface);
+  background: var(--color-stepper-button-bg);
   color: var(--color-icon-muted);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
@@ -23,11 +23,11 @@
 }
 
 .button:hover:not(:disabled) {
-  background: var(--color-border);
+  background: color-mix(in srgb, var(--color-stepper-button-bg) 80%, black);
 }
 
 .button:active:not(:disabled) {
-  background: var(--color-divider);
+  background: color-mix(in srgb, var(--color-stepper-button-bg) 68%, black);
   transform: scale(0.92);
 }
 

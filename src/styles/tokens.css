@@ -6,8 +6,10 @@
   --color-border-selected: #4E2FD2;
   --color-text-primary: #1a1d23;
   --color-text-secondary: #6b7280;
+  --color-text-tertiary: #1F1F1FBF;
   --color-text-muted: #9aa1ab;
   --color-accent: #4E2FD2;
+  --color-accent-link: #0000EE;
   --color-accent-contrast: #ffffff;
   --color-badge-bg: #4E2FD2;
   --color-badge-text: #ffffff;
@@ -23,6 +25,7 @@
   --color-text-tertiary: #6f7882;
   --color-obsidian: #0b0d10;
   --color-stepper-bg: #f1f1f2;
+  --color-stepper-button-bg: #f0f4f7;
   --color-icon-muted: #575757;
   --color-eyebrow: #484848;
   --color-row-divider: #1f1f1f;
