@@ -14,13 +14,17 @@ export function ReviewLineItem({ item }: { item: TReviewLineItem }) {
     <div className={styles.row}>
       <img className={styles.thumbnail} src={image} alt={title} />
       <span className={styles.title}>{title}</span>
-      <QuantityStepper
-        quantity={quantity}
-        onChange={setQuantity}
-        isFree={product.price === 0}
-        min={product.required ? 1 : 0}
-      />
-      <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+      <span className={styles.stepperCol}>
+        <QuantityStepper
+          quantity={quantity}
+          onChange={setQuantity}
+          isFree={product.price === 0}
+          min={product.required ? 1 : 0}
+        />
+      </span>
+      <span className={styles.priceCol}>
+        <PriceTag compareAtPrice={product.compareAtPrice} price={product.price} />
+      </span>
     </div>
   );
 }

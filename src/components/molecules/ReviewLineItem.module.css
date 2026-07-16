@@ -27,3 +27,16 @@
   letter-spacing: 0.07px;
   color: var(--color-obsidian);
 }
+
+.stepperCol {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.priceCol {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 70px;
+}
