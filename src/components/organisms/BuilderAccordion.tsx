@@ -42,7 +42,7 @@ export function BuilderAccordion() {
               <div className={styles.contentInner}>
                 <div className={styles.content}>
                   {isPlanStep ? (
-                    <div className={styles.planList}>
+                    <div className={styles.planList} role="radiogroup" aria-label="Plan">
                       {PLANS.map((plan) => (
                         <PlanOption key={plan.id} plan={plan} isSelected={plan.id === planId} onSelect={() => selectPlan(plan.id)} />
                       ))}
