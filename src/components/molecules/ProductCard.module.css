@@ -5,6 +5,8 @@
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: 15px 11px;
+  display: flex;
+  align-items: center;
 }
 
 .cardSelected {
@@ -39,8 +41,9 @@
   }
 
   .layout {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .image {
@@ -53,6 +56,7 @@
   .content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--space-3);
     flex: 1;
     min-width: 0;
@@ -67,7 +71,7 @@
   .noVariants .content {
     flex: 0 1 auto;
     min-width: 0;
-    max-width: 240px;
+    width: fit-content;
   }
 
   .noVariants .image {
@@ -112,7 +116,7 @@
 
 .description {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-tertiary);
   margin: 0;
 }
 
@@ -128,5 +132,4 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-top: auto;
 }

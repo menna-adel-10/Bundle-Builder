@@ -11,9 +11,9 @@
     "compareAtPrice": 35.98,
     "price": 27.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-v4-white.png" },
-      { "id": "grey", "label": "Grey", "colorHex": "#8C8C8C" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/wyze-cam-v4-black-swatch.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-v4-white.png", "swatchImage": "/products/wyze-cam-v4-white.png" },
+      { "id": "grey", "label": "Grey", "colorHex": "#8C8C8C", "image": "/products/wyze-cam-v4-grey.png", "swatchImage": "/products/wyze-cam-v4-grey.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-cam-v4-black-swatch.png", "swatchImage": "/products/wyze-cam-v4-black-swatch.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -30,7 +30,7 @@
     "price": 34.98,
     "variants": [
       { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-pan-v3-white.png", "swatchImage": "/products/wyze-cam-pan-v3-white-swatch.png" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "swatchImage": "/products/wyze-cam-pan-v3-black-swatch.png" }
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-cam-pan-v3-black-swatch.png", "swatchImage": "/products/wyze-cam-pan-v3-black-swatch.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -46,8 +46,8 @@
     "compareAtPrice": 88.98,
     "price": 69.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-floodlight-v2-white.png" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-cam-floodlight-v2-black.png", "swatchImage": "/products/wyze-cam-floodlight-v2-black-swatch.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-cam-floodlight-v2-white.png", "swatchImage": "/products/wyze-cam-floodlight-v2-white.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-cam-floodlight-v2-black.png", "swatchImage": "/products/wyze-cam-floodlight-v2-black.png" }
     ],
     "defaultVariantId": "white"
   },
@@ -73,8 +73,8 @@
     "compareAtPrice": 89.98,
     "price": 89.98,
     "variants": [
-      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-battery-cam-pro-white.png" },
-      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-battery-cam-pro-black.png" }
+      { "id": "white", "label": "White", "colorHex": "#F5F5F0", "image": "/products/wyze-battery-cam-pro-white.png", "swatchImage": "/products/wyze-battery-cam-pro-white.png" },
+      { "id": "black", "label": "Black", "colorHex": "#2B2B2B", "image": "/products/wyze-battery-cam-pro-black.png", "swatchImage": "/products/wyze-battery-cam-pro-black.png" }
     ],
     "defaultVariantId": "white"
   },

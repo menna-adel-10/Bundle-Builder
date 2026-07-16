@@ -69,9 +69,9 @@ export function ReviewPanel() {
 
           <div className={`${styles.section} ${styles.row}`}>
             <span className={styles.rowLabel}>
-              <span className={styles.shippingIconBox}>
+              <div className={styles.shippingIconBox}>
                 <img className={styles.shippingIcon} src="/icons/shipping-truck.svg" alt="" />
-              </span>
+              </div>
               <span className={styles.shippingLabel}>{shipping.label}</span>
             </span>
             <PriceTag compareAtPrice={shipping.compareAtPrice} price={shipping.price} />

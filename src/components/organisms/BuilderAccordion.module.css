@@ -9,6 +9,8 @@
   background: var(--color-surface);
   border-bottom: 0.5px solid var(--color-row-divider);
   overflow: hidden;
+  padding: 0 15px;
+  container-type: inline-size;
 }
 
 .step:first-child {
@@ -41,12 +43,16 @@
 }
 
 .content {
-  padding: 0 12px 15px;
+  padding: 20px 0 15px;
 }
 
 @media (max-width: 560px) {
   .step.stepOpen {
     border-radius: 0;
+  }
+
+  .step {
+    padding: 0 var(--space-4);
   }
 }
 
@@ -56,15 +62,15 @@
   gap: 15px;
 }
 
-@media (min-width: 560px) {
+@container (min-width: 560px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@container (min-width: 1150px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -97,4 +103,3 @@
   background: color-mix(in srgb, var(--color-accent) 18%, transparent);
   transform: scale(0.97);
 }
-
