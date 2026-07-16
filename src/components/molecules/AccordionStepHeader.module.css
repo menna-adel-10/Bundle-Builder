@@ -27,12 +27,22 @@
   gap: 8px;
 }
 
-.header:hover {
-  background: color-mix(in srgb, var(--color-panel-bg) 98%, black);
+.chevronBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
 }
 
-.header:active {
-  background: color-mix(in srgb, var(--color-panel-bg) 95%, black);
+.chevronBox:hover {
+  background: color-mix(in srgb, var(--color-panel-bg) 92%, black);
+}
+
+.chevronBox:active {
+  background: color-mix(in srgb, var(--color-panel-bg) 85%, black);
 }
 
 .eyebrow {
