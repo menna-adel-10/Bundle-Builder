@@ -24,7 +24,7 @@
 }
 
 .textStackOpen {
-  gap: 0;
+  gap: var(--space-2);
 }
 
 .chevronBox {
@@ -58,8 +58,8 @@
 
 .eyebrowOpen {
   font-size: 12px;
-  margin: 0 -12px;
-  padding: 0 12px 8px;
+  margin: 0 -27px;
+  padding: 0 27px 8px;
   border-bottom: 0.5px solid var(--color-row-divider);
 }
 
